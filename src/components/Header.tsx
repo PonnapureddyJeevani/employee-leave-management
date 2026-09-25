@@ -1,0 +1,3 @@
+import {Bell,Menu,Search} from "lucide-react";
+interface Props{onMenu:()=>void;onSearch:(v:string)=>void}
+export default function Header({onMenu,onSearch}:Props){return <header className="topbar"><button className="icon-btn menu-btn" onClick={onMenu}><Menu size={22}/></button><div className="search-box"><Search size={18}/><input placeholder="Search leave requests..." onChange={e=>onSearch(e.target.value)}/></div><div className="topbar-right"><button className="notification-btn"><Bell size={19}/><span/></button><div className="profile"><div className="avatar">JR</div><div className="profile-text"><strong>Jeevani Reddy</strong><small>Employee</small></div></div></div></header>}
